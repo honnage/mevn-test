@@ -62,6 +62,7 @@ studentRoute.route('/delete-student/:id').delete((req, res, next) => {
             })
         }
     })
-}
+})
+
 
 module.exports = studentRoute;
