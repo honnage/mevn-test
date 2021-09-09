@@ -38,13 +38,13 @@ studentRoute.route('/edit-student/:id').get((req, res, next) => {
 })
 
 //Update stude database
-studentRoute.route('/update-students/:id').put((req, res, next) => {
+studentRoute.route('/update-student/:id').put((req, res, next) => {
     StudentModel.findByIdAndUpdate(req.params.id, {
         $set: req.body
-    },(error, data)  =>{
-        if(error){
+    }, (error, data) => {
+        if (error) {
             return next(error);
-        }else{
+        } else {
             res.json(data);
             console.log('Student successfully updated');
         }
